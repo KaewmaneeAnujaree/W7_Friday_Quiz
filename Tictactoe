@@ -1,0 +1,77 @@
+class Board():
+    def __init__(self):
+        self.board = [["1","2","3"],["4","5","6"],["7","8","9"]]
+        self.checkwin = False
+        self.printer = Printer()
+        self.textinput = TextInput()
+    def getterBoard(self,column):
+        return self.board[column]
+    def setterBoard(self,column,row,value):
+        self.board[column][row] = value
+    def checkWin(self):
+        if self.board[0][0] =='x' and self.board[1][0] =='x' and self.board[2][0] =='x' or self.board[0][1] =='x' and self.board[1][1] =='x' and self.board[2][1] == 'x' or self.board[0][2] =='x' and self.board[1][2] =='x' and self.board[2][2] == 'x':
+            return "X is winner!!"
+            self.checkwin = True
+        elif self.board[0][0] =='o' and self.board[1][0] =='o' and self.board[2][0] =='o' or self.board[0][1] =='o' and self.board[1][1] =='o' and self.board[2][1] == 'o' or self.board[0][2] =='o' and self.board[1][2] =='o' and self.board[2][2] == 'o':
+            return "O is winner!!"
+            self.checkwin = True
+        elif self.board[0][0] =='x' and self.board[0][1] =='x' and self.board[0][2]  =='x' or self.board[1][0] =='x' and self.board[1][1] =='x' and self.board[1][2] == 'x' or self.board[2][0] =='x' and self.board[2][1] =='x' and self.board[2][2] == 'x':
+            return "X is winner!!"
+            self.checkwin = True
+        elif self.board[0][0] =='o' and self.board[0][1] =='o' and self.board[0][2] =='o' or self.board[1][0] =='o'and self.board[1][1] =='o'and self.board[1][2] == 'o' or self.board[2][0] =='o'and self.board[2][1] =='y'and self.board[2][2] == 'o':
+            return "O is winner!!"
+            self.checkwin = True
+        elif self.board[0][0] =='x'and self.board[1][1] =='x'and self.board[2][2] =='x' or self.board[0][2] =='x'and self.board[1][1] =='x'and self.board[2][0] == 'x':
+            print("X is winner!!")
+            self.checkwin = True
+        elif self.board[0][0] =='o'and self.board[1][1] =='o'and self.board[2][2] =='o’' or self.board[0][2] =='o'and self.board[1][1] =='o'and self.board[2][0] == 'o':
+            return "O is winner!!"
+            self.checkwin = True
+        else:
+            return " "
+    def resetBoard(self):
+        self.board = [["1","2","3"],["4","5","6"],["7","8","9"]]
+    def startGame(self):
+        for i in range(3):
+            self.printer.printBoard(self.board,len(self.board)-1-i)
+        print("------------------------------------------------------")
+        while self.checkwin == False:
+            position = self.textinput.position()
+            if position in "1,2,3,4,5,6,7,8,9" and self.getterBoard((int(position)-1)//3)[(int(position)-1)%3] in "1,2,3,4,5,6,7,8,9":
+                self.setterBoard((int(position)-1)//3,(int(position)-1)%3,self.textinput.symbol())
+                for i in range(3):
+                    self.printer.printBoard(self.board,len(self.board)-1-i)
+                print("------------------------------------------------------")
+                self.textinput.round+=1
+                self.checkWin()
+            else:
+                print("Please select another position")
+        self.restart = input("Do you want to restart (y/n)")
+        if board.restart == "y":
+            self.resetBoard()
+            self.checkwin = False
+            self.textinput.resetRound()
+            self.startGame()
+class Printer():
+    def printBoard(self,board,column):
+        print(board[column])
+    def printError(self):
+        print("You can't do that")
+class TextInput():
+    def __init__(self):
+        self.round=1
+    def position(self):
+        inputs = input("Select position : ")
+        return inputs
+    def symbol(self):
+        if self.round %2 ==0:
+            return "o"
+        elif self.round %2 ==1:
+            return "x"
+    def resetRound(self):
+        self.round = 1
+
+board = Board()
+board.startGame()
+
+
