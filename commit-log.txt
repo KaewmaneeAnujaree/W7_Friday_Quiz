@@ -1,3 +1,15 @@
+commit 8ddc159ea471f2b760782d35bfb9f8e886b4b3a9
+Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
+Date:   Fri Aug 28 13:25:09 2020 +0700
+
+    change method name and modified method
+
+commit 85a572b2ab682d349a2ebf1a8a40101f4f4590d3
+Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
+Date:   Fri Aug 21 16:26:44 2020 +0700
+
+    add git-log .txt
+
 commit d366b449457f17f99464b571ef934ff8118d76a2
 Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
 Date:   Fri Aug 21 16:25:52 2020 +0700
