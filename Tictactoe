@@ -16,10 +16,10 @@ class Board():
             return "O is winner!!"
         elif self.board[0][0] =='x' and self.board[0][1] =='x' and self.board[0][2]  =='x' or self.board[1][0] =='x' and self.board[1][1] =='x' and self.board[1][2] == 'x' or self.board[2][0] =='x' and self.board[2][1] =='x' and self.board[2][2] == 'x':
             return "X is winner!!"
-        elif self.board[0][0] =='o' and self.board[0][1] =='o' and self.board[0][2] =='o' or self.board[1][0] =='o'and self.board[1][1] =='o'and self.board[1][2] == 'o' or self.board[2][0] =='o'and self.board[2][1] =='y'and self.board[2][2] == 'o':
+        elif self.board[0][0] =='o' and self.board[0][1] =='o' and self.board[0][2] =='o' or self.board[1][0] =='o'and self.board[1][1] =='o'and self.board[1][2] == 'o' or self.board[2][0] =='o'and self.board[2][1] =='o'and self.board[2][2] == 'o':
             return "O is winner!!"
         elif self.board[0][0] =='x'and self.board[1][1] =='x'and self.board[2][2] =='x' or self.board[0][2] =='x'and self.board[1][1] =='x'and self.board[2][0] == 'x':
-            print("X is winner!!")
+            return("X is winner!!")
         elif self.board[0][0] =='o'and self.board[1][1] =='o'and self.board[2][2] =='o' or self.board[0][2] =='o'and self.board[1][1] =='o'and self.board[2][0] == 'o':
             return "O is winner!!"
         else:
@@ -37,9 +37,9 @@ class Board():
         while self.round <10 and self.check_win() == " ":
             position = str(textinput.input_sym())
             if self.round %2 ==0:
-                symbol = "o"
+                symbol = 'o'
             elif self.round %2 ==1:
-                symbol = "x"
+                symbol = 'x'
                     
             if position in "1,2,3,4,5,6,7,8,9" and self.getter_symbol((int(position)-1)//3)[(int(position)-1)%3] in "1,2,3,4,5,6,7,8,9":
                 self.setter_symbol((int(position)-1)//3,(int(position)-1)%3,symbol)
@@ -50,6 +50,7 @@ class Board():
                 
             else:
                 print("Please select another position")
+        print(self.check_win())
         restart = input("Do you want to restart (y/n) : ")
         if str(restart) in "y":
             self.reset_Board()
@@ -62,6 +63,7 @@ class Printer():
         print(board[column])
 
 class TextInput():
+    
     def input_sym(self):
         inputs = input("Select position : ")
         return inputs
