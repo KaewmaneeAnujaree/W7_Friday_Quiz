@@ -1,3 +1,16 @@
+commit d21ae7dc0bbc8789e096f23cefc2a473014252bc
+Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
+Date:   Sat Aug 29 21:03:53 2020 +0700
+
+    delete function and method that not use
+
+commit af8fcec6f8d1a48d8f7fa29577b8db492ec443cc
+Merge: 8c0edcd 3e189f3
+Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
+Date:   Fri Aug 28 13:32:15 2020 +0700
+
+    change method name and modified Class method
+
 commit 8c0edcdcb347ca570d2354e803a97dd591a1343d
 Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
 Date:   Fri Aug 28 13:29:00 2020 +0700
@@ -9,6 +22,30 @@ Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
 Date:   Fri Aug 28 13:25:09 2020 +0700
 
     change method name and modified method
+
+commit 3e189f322cb3803ad79ed61476538bfafe10687e
+Author: Kaewmanee Anujaree <s6201012620031@email.kmutnb.ac.th>
+Date:   Fri Aug 21 23:29:48 2020 +0700
+
+    add commit log
+
+commit d5c89264fc7dd88603b8baa98690c048c59f237a
+Author: Kaewmanee Anujaree <s6201012620031@email.kmutnb.ac.th>
+Date:   Fri Aug 21 23:28:55 2020 +0700
+
+    last commit.
+
+commit f0e4cbe041cb90d4ed323b091b8ae834ae85d262
+Author: Phimbun Issawilanon <s6201012620198@email.kmutnb.ac.th>
+Date:   Fri Aug 21 19:41:21 2020 +0700
+
+    add commit log
+
+commit 2e1d58836ef640ad9ca272342613d2edb40db13b
+Author: Phimbun Issawilanon <s6201012620198@email.kmutnb.ac.th>
+Date:   Fri Aug 21 19:14:14 2020 +0700
+
+    edit checkwin
 
 commit 85a572b2ab682d349a2ebf1a8a40101f4f4590d3
 Author: Kantinun <s6201012630011@email.kmutnb.ac.th>
